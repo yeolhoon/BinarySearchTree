@@ -36,7 +36,7 @@ class binarySearchTree:
             self.show_tree(new_node.left, level + 1)
 
     def main(self):
-        for i in [1, 2, 3, 4, 5, 6, 7]:
+        for i in [4, 3, 7, 10, 5, 6, 8]:
             self.insert(i)
         self.show_tree(self.root)
 
