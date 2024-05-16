@@ -36,17 +36,19 @@ class binaryTree:
         return None
 
     def show_tree(self, new_node, level=0):
-        if new_node is not None:
+        if new_node:
             self.show_tree(new_node.right, level + 1)
             print(' ' * 4 * level + '->', new_node.data)
             self.show_tree(new_node.left, level + 1)
         return None
 
-    def main(self):
-        for i in [1, 2, 3, 4, 5, 6, 7]:
-            self.insert(i)
-        self.show_tree(self.root)
+
+def main():
+    test_binaryTree = binaryTree()
+    for i in [1, 2, 3, 4, 5, 6, 7]:
+        test_binaryTree.insert(i)
+    test_binaryTree.show_tree(test_binaryTree.root)
 
 
-test_binaryTree = binaryTree()
-test_binaryTree.main()
+if __name__ == "__main__":
+    main()
